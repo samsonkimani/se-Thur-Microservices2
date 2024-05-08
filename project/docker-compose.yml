@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  user-service:
+    build: ./user_service
+    ports:
+      - "5000:5000"
+  account-service:
+    build: ./account_service
+    ports:
+      - "5001:5000"
+  currency-service:
+    build: ./currency_service
+    ports:
+      - "5002:5000"
+  api-gateway:
+    build: ./api_gateway
+    ports:
+      - "80:80"
